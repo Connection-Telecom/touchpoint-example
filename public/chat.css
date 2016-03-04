@@ -1,0 +1,129 @@
+
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.chat-view {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 50px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.text-entry-wrapper {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	height: 30px;
+	right: 70px;
+}
+
+.text-entry {
+	height: 100%;
+	width: 100%;
+	padding: 0 8px;
+}
+
+.send-btn {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 50px;
+	height: 30px;
+}
+
+.chat-note {
+	text-align: center;
+	color: #777;
+	clear: both;
+	padding: 5px 0;
+	margin: 0;
+}
+
+.chat-message {
+	float: left;
+	clear: both;
+	width: 80%;
+	position: relative;
+	padding: 7px;
+	margin: 3px 10px;
+	border-radius: 3px;
+	color: #444;
+}
+
+.chat-message:after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-right: 5px solid #777;
+	left: -5px;
+	position: absolute;
+	top: 11px;
+}
+
+.chat-message.chat-message-agent {
+	float: right;
+	background-color: #dff0d8;
+	animation-name: agentMessage;
+	animation-duration: 0.2s;
+}
+
+.chat-message.chat-message-agent:after {
+	border-right: none;
+	border-left: 5px solid #dff0d8;
+	right: -5px;
+	left: auto;
+}
+
+.chat-message.chat-message-user {
+	background-color: #d9edf7;
+	animation-name: userMessage;
+	animation-duration: 0.2s;
+}
+
+.chat-message.chat-message-user:after {
+	border-right: 5px solid #d9edf7;
+}
+
+.hidden {
+	display: none;
+}
+
+@keyframes userMessage {
+	0% {
+		transform: translateX(-20px);
+		opacity: 0;
+	}
+	100% {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+@keyframes agentMessage {
+	0% {
+		transform: translateX(20px);
+		opacity: 0;
+	}
+	100% {
+		transform: none;
+		opacity: 1;
+	}
+}

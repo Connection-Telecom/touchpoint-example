@@ -1,0 +1,12 @@
+{
+	"name": "touchpoint-example",
+	"dependencies": {
+		"express": "4.13.x",
+		"request": "2.69.x",
+		"consolidate": "0.14.x",
+		"handlebars": "4.0.5",
+		"body-parser": "1.15.x",
+		"underscore": "1.8.x"
+	},
+	"private": true
+}

@@ -1,0 +1,15 @@
+{
+	"site": "https://touchpoint.telviva.com",
+	"customerId": "put your customer ID here",
+	"port": 4000,
+	"topics": [
+		{"name": "priceq", "topic": "I have a question about prices", "team": "Sales"},
+		{"name": "salesq", "topic": "I have a general sales question", "team": "Sales"},
+		{"name": "newhelp", "topic": "I'm a new customer who needs help", "team": "On-boarding"},
+		{"name": "login", "topic": "I can't log in", "team": "Support"},
+		{"name": "post", "topic": "I'm having problems posting", "team": "Support"},
+		{"name": "supportq", "topic": "I have some other issue", "team": "Support"}
+	],
+	"userId": "put your user ID here",
+	"authToken": "put your auth token here"
+}

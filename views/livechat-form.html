@@ -1,0 +1,27 @@
+
+<!doctype html>
+
+<html>
+	<head>
+		<title>Live chat</title>
+	</head>
+	<body>
+		<form action="/chat" method="POST">
+			<dl>
+				<dt>Name</dt>
+				<dd><input name="name" type="text"></dd>
+				<dt>Email</dt>
+				<dd><input name="email" type="email"></dd>
+				<dt>Topic</dt>
+				<dd>
+					<select name="topic">
+						{{#topics}}
+							<option value="{{name}}">{{topic}}</option>
+						{{/topics}}
+					</select>
+				</dd>
+			</dl>
+			<input type="submit">
+		</form>
+	</body>
+</html>

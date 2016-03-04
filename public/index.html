@@ -1,0 +1,43 @@
+
+<!doctype html>
+
+<html>
+	<head>
+		<title>Home page</title>
+		<link rel="stylesheet" href="/index.css">
+	</head>
+	<body>
+		<div id="content">
+			<h1>This is the home page</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro accusantium repellat nihil blanditiis, sunt, nesciunt, maxime repudiandae rem cupiditate at alias nostrum, labore nemo enim velit numquam molestiae itaque eveniet!</p>
+			<p>Beatae natus delectus quo enim sed quasi asperiores nostrum vero. Nesciunt maiores iste quia velit ab, repellat reiciendis eveniet obcaecati temporibus corporis dolore eum neque aliquam magni porro sed vero.</p>
+			<p>Vitae quaerat earum voluptates, quas, ab eveniet perferendis praesentium, eum molestiae autem id soluta, ea quam suscipit veniam. Nostrum hic aliquid, dolorum harum facilis in voluptates distinctio repellendus laudantium, et?</p>
+			<p>Nemo, ratione, suscipit velit dolorum consectetur dolores eligendi deserunt, soluta cum aliquid neque! Eum, sapiente, rerum. Similique perspiciatis fugiat saepe nam ipsum odio quas delectus, sit. Id voluptatum corporis nesciunt.</p>
+			<p>Alias ad est ipsa, perferendis dolores! In tempora voluptatibus voluptatem eligendi quibusdam ipsam aut repudiandae labore reiciendis at fugit, ex reprehenderit modi aspernatur inventore iste facilis aliquid doloribus magni laudantium.</p>
+			<ul>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis vitae molestias laudantium, totam, numquam fugit, voluptatum est tempore ut quod soluta saepe explicabo et in assumenda accusamus tenetur voluptates! Expedita?</li>
+				<li>Quis sunt animi in maxime aperiam, pariatur velit minima cupiditate est id quibusdam esse cumque deleniti inventore perferendis eaque itaque! Necessitatibus debitis libero eum sit deleniti veritatis quidem voluptas dolorum.</li>
+				<li>Impedit quibusdam accusamus minus ullam quae animi culpa! Necessitatibus sapiente, sunt assumenda. Nam dolore quas et, dolorum consectetur velit laboriosam cupiditate fugiat pariatur accusantium dolores nemo repudiandae quaerat quae eveniet.</li>
+				<li>Reiciendis sunt perspiciatis natus, accusamus laudantium quos ducimus vel nemo aliquam inventore esse eius. Assumenda earum quia perferendis nostrum sint laudantium fugiat accusantium repudiandae error quisquam, sit, ipsam optio minima.</li>
+				<li>Odit, iste rerum nam autem quis. Odio excepturi commodi, velit. Aperiam asperiores repudiandae saepe atque error quos maiores, qui in, quidem similique eaque sint laborum magni veritatis tempora ipsum. Odio.</li>
+			</ul>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci error consectetur totam, amet ea recusandae corporis repellat vitae! Perferendis praesentium sint magni, placeat explicabo, corrupti quis ratione quae possimus nam.</p>
+			<p>Accusamus voluptatum illo fuga est ratione, et quod distinctio sunt atque nobis provident dolore autem, qui, nam! Totam odit aut maiores quidem, impedit, officiis quo recusandae quas, culpa provident voluptatum?</p>
+			<p>Nihil qui sit voluptates debitis, atque iure possimus corporis aperiam laboriosam modi ducimus dignissimos officia maxime, et esse optio id nesciunt incidunt. Unde, nihil quos non repellendus odit, veniam numquam!</p>
+			<p>Quam quis corporis impedit aperiam ducimus sed nisi expedita sit, obcaecati facilis nobis ullam tempore mollitia repellendus velit nemo dignissimos voluptatum veniam! Ducimus neque repellat sequi deleniti eligendi atque consequuntur!</p>
+			<p>Natus voluptatibus ducimus debitis temporibus enim minima est incidunt assumenda at perspiciatis mollitia unde placeat iure officia adipisci sit consequuntur vero, laborum perferendis architecto repellendus aliquid distinctio provident, voluptatem blanditiis.</p>
+		</div>
+
+		<button id="contact-btn">Contact us</button>
+		<script>
+			var popup = null;
+			document.getElementById("contact-btn").onclick = function () {
+				if (!popup || popup.closed) {
+					popup = window.open("/contact", "", "height=400,width=300");
+				} else {
+					popup.focus();
+				}
+			};
+		</script>
+	</body>
+</html>

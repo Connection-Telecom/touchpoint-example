@@ -1,0 +1,30 @@
+
+<!doctype html>
+
+<html>
+	<head>
+		<title>Live chat</title>
+		<link rel="stylesheet" href="/chat.css">
+		<script src="/jquery-1.12.0.min.js"></script>
+		<script src="/ddp.js"></script>
+		<script>
+			var site = JSON.parse({{{site}}});
+			var customerId = JSON.parse({{{customerId}}});
+			var topic = JSON.parse({{{topic}}});
+			var team = JSON.parse({{{team}}});
+			var contextToken = JSON.parse({{{contextToken}}});
+		</script>
+		<script src="/chat.js"></script>
+	</head>
+	<body>
+		<div class="chat-view">
+			<p class="insertion-point hidden"></p>
+			<p class="chat-note status">Connecting...</p>
+			<p class="chat-note agent-typing hidden">Agent is typing...</p>
+		</div>
+		<div class="text-entry-wrapper">
+			<input type="text" class="text-entry" maxlength="4096">
+		</div>
+		<button class="send-btn">Send</button>
+	</body>
+</html>

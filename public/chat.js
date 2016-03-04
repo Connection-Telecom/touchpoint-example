@@ -20,9 +20,6 @@ $(function () {
 });
 
 function startChat() {
-	$(".enter-topic-mode").addClass("hidden");
-	$(".chat-mode").removeClass("hidden");
-
 	ddp.connect().then(function () {
 		return ddp.call("createChat", [customerId, topic, team, contextToken]);
 
@@ -31,7 +28,6 @@ function startChat() {
 
 		ddp.watch("chats", function (chat, eventType) {
 			if (chat.agentId != null) {
-				foundAgent = true;
 				$(".status").addClass("hidden");
 			} else {
 				$(".status").text("Waiting for an agent...").removeClass("hidden");

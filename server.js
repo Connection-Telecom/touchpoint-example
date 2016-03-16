@@ -89,7 +89,7 @@ app.post("/chat", urlencoded, function (req, res) {
 		res.render("chat", {
 			site: escapeForScriptTag(config.site),
 			customerId: escapeForScriptTag(config.customerId),
-			topic: escapeForScriptTag(topic.topic),
+			topic: escapeForScriptTag(topic.shortTopic || topic.topic),
 			team: escapeForScriptTag(team),
 			contextToken: escapeForScriptTag(body)
 		})

@@ -51,7 +51,21 @@ function startChat() {
 			if (eventType === "added") {
 				if (message.type === "agentMsg") {
 					$(".agent-typing").addClass("hidden");
-					$('<p class="chat-message chat-message-agent">').text(message.message).insertBefore(".insertion-point");
+					$('<p class="chat-message chat-message-agent">').text(message.message).linkify({
+						validate: function (value, type) {
+							return type === "url";
+						},
+						target: "_blank",
+						events: {
+							click: function (e) {
+								if (window.opener != null) {
+									window.opener.location.href = e.currentTarget.href;
+									e.preventDefault();
+									return false;
+								}
+							}
+						}
+					}).insertBefore(".insertion-point");
 				} else {
 					if (message.type === "claim") {
 						$(".status").addClass("hidden");

@@ -55,16 +55,7 @@ function startChat() {
 						validate: function (value, type) {
 							return type === "url";
 						},
-						target: "_blank",
-						events: {
-							click: function (e) {
-								if (window.opener != null) {
-									window.opener.location.href = e.currentTarget.href;
-									e.preventDefault();
-									return false;
-								}
-							}
-						}
+						target: "_blank"
 					}).insertBefore(".insertion-point");
 				} else {
 					if (message.type === "claim") {
